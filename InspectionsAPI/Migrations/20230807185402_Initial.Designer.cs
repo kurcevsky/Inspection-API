@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication1;
 using WebApplication1.Models;
@@ -11,9 +12,11 @@ using WebApplication1.Models;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230807185402_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace WebApplication1.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApplication1.Inspection", b =>
+            modelBuilder.Entity("InspectionsAPI.Inspection", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +53,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("Inspections");
                 });
 
-            modelBuilder.Entity("WebApplication1.InspectionType", b =>
+            modelBuilder.Entity("InspectionsAPI.InspectionType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,7 +71,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("InspectionTypes");
                 });
 
-            modelBuilder.Entity("WebApplication1.Status", b =>
+            modelBuilder.Entity("InspectionsAPI.Status", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -86,9 +89,9 @@ namespace WebApplication1.Migrations
                     b.ToTable("Statuses");
                 });
 
-            modelBuilder.Entity("WebApplication1.Inspection", b =>
+            modelBuilder.Entity("InspectionsAPI.Inspection", b =>
                 {
-                    b.HasOne("WebApplication1.InspectionType", "InspectionType")
+                    b.HasOne("InspectionsAPI.InspectionType", "InspectionType")
                         .WithMany()
                         .HasForeignKey("InspectionTypeId")
                         .OnDelete(DeleteBehavior.Cascade)

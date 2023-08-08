@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EDD01LSMPVV6X94T2u/QrNqLNJlegURAOpOK8UEekU5tBWLeyui9nCnxRa1dz8KdG/xyLQKc4j6HMRi7AKzUQQ==",
+  "dgSpecHash": "yK2HU4i2bMOiyWc8rAqI/35zxagB41cdDAFWQCZPMp/EetymEyyspw1cVwz9bUF2mLl/wLVeLcSkkuC/Ny0ifw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\malys\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\malys\\RiderProjects\\WebApplication1\\InspectionsAPI\\InspectionsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\malys\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\malys\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
